@@ -1,0 +1,191 @@
+* {
+	margin: 0%;
+	padding: 0%;
+	box-sizing: border-box;
+}
+a { text-decoration: none; 
+    color: black;}
+    @keyframes slide-in-blurred-top{0%{transform:translateY(-1000px) scaleY(2.5) scaleX(.2);transform-origin:50% 0;filter:blur(40px);opacity:0}100%{transform:translateY(0) scaleY(1) scaleX(1);transform-origin:50% 50%;filter:blur(0);opacity:1}}
+    @keyframes slide-in-bck-center{0%{transform:translateZ(600px);opacity:0}100%{transform:translateZ(0);opacity:1}}
+    @keyframes pulsate-fwd{0%{transform:scale(1)}50%{transform:scale(1.1)}100%{transform:scale(1)}}
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+ $estilos: (
+        bg-color:#9DE9E9,
+        bg-color2:#4DBACE,
+        bg-color3:#9ADCFF,
+        color:#ffff,
+        // font-family:'Indie Flower', cursive,
+        );
+#body{
+    background-color: map-get($estilos, bg-color);
+    display: flex;  
+    flex-direction: column;
+    .navbar{
+        font-family: 'Indie Flower', cursive;
+        color: #ffff;
+        background-color: map-get($estilos, bg-color2 );
+        .navbar-toggler-icon {
+            filter: invert(1);
+        }
+        .logoNav{
+            border-radius: 30px;
+        }
+    }
+    .text-1{
+        @extend .navbar;
+        margin-top: 20px;
+        text-align: center;
+        padding: 10px;
+        animation:slide-in-blurred-top 1.5s cubic-bezier(.23,1.000,.32,1.000) 1.5s both;
+    }
+    .carrousel{
+        margin-top: 20px;
+        animation:slide-in-bck-center 2s cubic-bezier(.25,.46,.45,.94) both;
+    }
+    .materias{
+        color: #ffff;
+        font-family:'Indie Flower', cursive;
+        background-color:#9ADCFF;
+        margin-top: 20px;
+        text-align: center;
+        padding: 10px;
+        border-radius: 45px;
+        animation:roll-in-blurred-right .7s cubic-bezier(.23,1.000,.32,1.000) both;
+        .materiasLi{
+            list-style: none;
+        }
+    }
+    .venta{
+        background-color: map-get($estilos, bg-color2 );
+        padding: 20px;
+        color: #ffff;
+        border-radius: 30px;
+        margin: 10px;
+        .h2Venta{
+            text-align: center;
+            text-decoration-color: none;
+            font-family: 'Indie Flower', cursive;
+        }
+        a{
+            text-decoration: none;
+            color: #ffff;
+        }
+        .listaVenta{
+            display: flex;
+            text-align: center;
+            flex-direction: row-reverse;
+            list-style: none;
+            gap: 20px;
+            margin-left: -20px;
+            .l1{
+                animation:pulsate-fwd 1.5s ease-in-out infinite both;
+                display: flex;
+                flex-direction: row-reverse;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: map-get($estilos, bg-color3 );
+        padding: 30px;
+        color: #ffff;
+    }
+    .redes{
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        padding: 10px;
+        background-color: map-get($estilos, bg-color3 );
+        margin-bottom: -15px;
+        color: #ffff;
+        a{
+            text-decoration: none;
+            color: #ffff;
+        }
+    }
+}
+
+    //Hoja Videos//
+    #body2{
+        @extend #body;
+        #videos{
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            .titulo-h2{
+                color: #ffff;
+                display: flex;
+                font-family: map-get($estilos, font-family );
+            }
+        }
+    }
+    //registro//
+
+    #bodyForms{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: #ffff;
+        font-family: 'Indie Flower', cursive;
+        background-color: map-get($estilos, bg-color );
+        #formulario{
+            background-color: #4DBACE;
+            border-radius: 20px;
+            padding: 25px;
+        }
+    }
+    #formularios{
+        padding: 5px;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        #nombre{
+            margin-bottom: 10px;
+            border-top-style: none;
+            border-left-style: none;
+            border-right-style: none;
+            border-bottom: 1px solid #ffffff;
+            color: #ffff;
+            background-color: #4DBACE;
+            textarea{
+                color: transparent;
+            }
+        }
+            #btnEnviar{
+            background: #fff;
+            color: #222;
+            text-align: center;
+            padding: 0.5em;
+            box-sizing: border-box;
+            background: #fff;
+            border: none;
+            box-shadow: none;
+            border-radius: 0.25em;
+            font-family: 'Indie Flower', cursive;
+            font-size: 16px;
+            }  
+    }
+
+// Estilos sweet alert//
+
+select.swal2-select{
+    font-family: 'Indie Flower', cursive;
+    background: #9ADCFF;
+    border-radius: 15px;
+}
+.swal2-title{
+    font-family: 'Indie Flower', cursive;
+}
+.swal2-styled.swal2-confirm{
+    @extend .swal2-title,
+}
+.swal2-html-container{
+    @extend .swal2-title,
+}

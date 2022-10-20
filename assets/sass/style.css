@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+@-webkit-keyframes slide-in-blurred-top {
+  0% {
+    -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+            transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+            transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-blurred-top {
+  0% {
+    -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+            transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+            transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-in-bck-center {
+  0% {
+    -webkit-transform: translateZ(600px);
+            transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-bck-center {
+  0% {
+    -webkit-transform: translateZ(600px);
+            transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes pulsate-fwd {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pulsate-fwd {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+#body, #body2 {
+  background-color: #9DE9E9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#body .navbar, #body2 .navbar, #body .text-1, #body2 .text-1 {
+  font-family: 'Indie Flower', cursive;
+  color: #ffff;
+  background-color: #4DBACE;
+}
+
+#body .navbar .navbar-toggler-icon, #body2 .navbar .navbar-toggler-icon, #body .text-1 .navbar-toggler-icon, #body2 .text-1 .navbar-toggler-icon {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+#body .navbar .logoNav, #body2 .navbar .logoNav, #body .text-1 .logoNav, #body2 .text-1 .logoNav {
+  border-radius: 30px;
+}
+
+#body .text-1, #body2 .text-1 {
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px;
+  -webkit-animation: slide-in-blurred-top 1.5s cubic-bezier(0.23, 1, 0.32, 1) 1.5s both;
+          animation: slide-in-blurred-top 1.5s cubic-bezier(0.23, 1, 0.32, 1) 1.5s both;
+}
+
+#body .carrousel, #body2 .carrousel {
+  margin-top: 20px;
+  -webkit-animation: slide-in-bck-center 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-in-bck-center 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+#body .materias, #body2 .materias {
+  color: #ffff;
+  font-family: 'Indie Flower', cursive;
+  background-color: #9ADCFF;
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 45px;
+  -webkit-animation: roll-in-blurred-right 0.7s cubic-bezier(0.23, 1, 0.32, 1) both;
+          animation: roll-in-blurred-right 0.7s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+#body .materias .materiasLi, #body2 .materias .materiasLi {
+  list-style: none;
+}
+
+#body .venta, #body2 .venta {
+  background-color: #4DBACE;
+  padding: 20px;
+  color: #ffff;
+  border-radius: 30px;
+  margin: 10px;
+}
+
+#body .venta .h2Venta, #body2 .venta .h2Venta {
+  text-align: center;
+  -webkit-text-decoration-color: none;
+          text-decoration-color: none;
+  font-family: 'Indie Flower', cursive;
+}
+
+#body .venta a, #body2 .venta a {
+  text-decoration: none;
+  color: #ffff;
+}
+
+#body .venta .listaVenta, #body2 .venta .listaVenta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  list-style: none;
+  gap: 20px;
+  margin-left: -20px;
+}
+
+#body .venta .listaVenta .l1, #body2 .venta .listaVenta .l1 {
+  -webkit-animation: pulsate-fwd 1.5s ease-in-out infinite both;
+          animation: pulsate-fwd 1.5s ease-in-out infinite both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#body .footer, #body2 .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #9ADCFF;
+  padding: 30px;
+  color: #ffff;
+}
+
+#body .redes, #body2 .redes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px;
+  background-color: #9ADCFF;
+  margin-bottom: -15px;
+  color: #ffff;
+}
+
+#body .redes a, #body2 .redes a {
+  text-decoration: none;
+  color: #ffff;
+}
+
+#body2 #videos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 15px;
+}
+
+#body2 #videos .titulo-h2 {
+  color: #ffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#bodyForms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #ffff;
+  font-family: 'Indie Flower', cursive;
+  background-color: #9DE9E9;
+}
+
+#bodyForms #formulario {
+  background-color: #4DBACE;
+  border-radius: 20px;
+  padding: 25px;
+}
+
+#formularios {
+  padding: 5px;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 7px;
+}
+
+#formularios #nombre {
+  margin-bottom: 10px;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom: 1px solid #ffffff;
+  color: #ffff;
+  background-color: #4DBACE;
+}
+
+#formularios #nombre textarea {
+  color: transparent;
+}
+
+#formularios #btnEnviar {
+  background: #fff;
+  color: #222;
+  text-align: center;
+  padding: 0.5em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #fff;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0.25em;
+  font-family: 'Indie Flower', cursive;
+  font-size: 16px;
+}
+
+select.swal2-select {
+  font-family: 'Indie Flower', cursive;
+  background: #9ADCFF;
+  border-radius: 15px;
+}
+
+.swal2-title, .swal2-styled.swal2-confirm, .swal2-html-container {
+  font-family: 'Indie Flower', cursive;
+}
+/*# sourceMappingURL=style.css.map */
