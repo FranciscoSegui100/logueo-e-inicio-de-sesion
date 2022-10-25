@@ -158,6 +158,18 @@ a { text-decoration: none;
                 color: transparent;
             }
         }
+        input, #contraseña1{
+            margin-bottom: 10px;
+            border-top-style: none;
+            border-left-style: none;
+            border-right-style: none;
+            border-bottom: 1px solid #ffffff;
+            color: #ffff;
+            background-color: #4DBACE;
+            textarea{
+                color: transparent;
+            }
+        }
             #btnEnviar{
             background: #fff;
             color: #222;
