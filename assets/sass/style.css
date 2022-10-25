@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 * {
   margin: 0%;
@@ -317,6 +318,20 @@ a {
 }
 
 #formularios #nombre textarea {
+  color: transparent;
+}
+
+#formularios input, #formularios #contraseña1 {
+  margin-bottom: 10px;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom: 1px solid #ffffff;
+  color: #ffff;
+  background-color: #4DBACE;
+}
+
+#formularios input textarea, #formularios #contraseña1 textarea {
   color: transparent;
 }
 

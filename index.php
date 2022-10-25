@@ -15,6 +15,8 @@
       $user = $results;
     }
   }
+  
+
 ?>
 
 
@@ -33,8 +35,42 @@
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body id="body">
-  <nav class="navbar navbar-expand-lg w-100">
-    <div class="container-fluid">
+  <?php if(!empty($user)): ?>
+    <nav class="navbar navbar-expand-lg w-100">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="index.html"><img src="./img/ruloCaba.png" class="logoNav" alt="icon" width="100px" height="auto"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="./pages/videos.html">Videos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" id="documentacion" href="#">Documentos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="cursos.php">Cursos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br>Bienvenido!</br>
+  <a href="loguot.php">
+        Salir
+      </a>
+    <?php else: ?>
+
+      <nav class="navbar navbar-expand-lg w-100">
+        <div class="container-fluid">
       <a class="navbar-brand text-white" href="index.html"><img src="./img/ruloCaba.png" class="logoNav" alt="icon" width="100px" height="auto"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -60,16 +96,9 @@
       </div>
     </div>
   </nav>
-  <?php if(!empty($user)): ?>
-      <br>Bienvenido!</br>
-      <a href="logout.php">
-        Salir
-      </a>
-    <?php else: ?>
-      <h1>Registrate o inicia sesion</h1>
-
-      <a href="login.php">Iniciar sesion</a> o
-      <a href="signup.php">Registrarse</a>
+  <h1>Registrate o inicia sesion</h1>
+  <a href="login.php">Iniciar sesion</a> o
+  <a href="registro.php">Registrarse</a>
     <?php endif; ?>
       <div class="text-1"><h1>Bienvenido a Rulo Caba</h1></div>
       <div class="carrousel">
